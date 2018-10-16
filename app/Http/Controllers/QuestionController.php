@@ -10,4 +10,8 @@ class QuestionController extends Controller
 
         echo 'This is the list of questions';
      }
+
+     function show () {
+       echo 'This is a detail of a question';
+     }
 }
