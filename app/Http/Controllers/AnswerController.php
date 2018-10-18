@@ -22,7 +22,7 @@ class AnswerController extends Controller
 
         $answer = Answer::find(1);
 
-        $vote = new \App\Vote;
+        $vote = new Vote;
         $vote->answer_id = $answer->id;
 
         if ($request->input('up')) {
