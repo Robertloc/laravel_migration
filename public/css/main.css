@@ -1,0 +1,174 @@
+#banner{
+    background: linear-gradient(to right, #126CFA 0, #108AEC 100%);
+}
+
+#banner .container{
+    height: 10rem;
+    display: flex;
+}
+
+#banner.banner-sm .container {
+    height: 4rem;
+}
+
+#banner h1{
+    margin: auto 0;
+    color: #fff;
+}
+
+
+#questions{
+    margin-top: 2rem;
+}
+
+
+.question{
+    border: solid #9199a1;
+    border-width: 1px 0 0 0;
+    display: flex;
+}
+.question:last-of-type{
+    border-width: 1px 0 1px 0;
+}
+
+.question .question-left{
+    width: 20%;
+    display: flex;
+}
+
+.question .question-left .question-stat{
+    text-align: center;
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.question .question-left .question-stat span{
+    font-size: 150%;
+    font-weight: 400;
+    margin: 0;
+    color: #9199a1;
+}
+
+.question .question-left .question-stat label{
+    font-size: 75%;
+    color: #9199a1;
+    margin: 0;
+}
+
+.question .question-right{
+    width: 80%;
+}
+
+.question .question-right .question-name{
+    padding: .3rem 1rem;
+    font-size: 120%;
+    font-weight: 500;
+}
+
+.question .question-right .question-name a{
+    color: #07C
+}
+
+.question .question-right .question-info{
+    padding: .3rem 1rem;
+    text-align: right;
+    font-size: 75%;
+    color: #9199a1;
+}
+
+.question .question-right .question-info a{
+    color: #07C
+}
+
+#question {
+    margin-top: 2rem;
+}
+
+#question .container {
+    display: flex;
+}
+
+#question .question-left {
+    width: 30%;
+}
+
+#question .question-right {
+    width: 70%;
+}
+
+#question .question-right h2 {
+    border: solid #9199a1;
+    border-width: 0 0 1px 0;
+}
+
+#answers {
+    margin-top: 2rem;
+}
+
+#answers h2 {
+    border: solid #9199a1;
+    border-width: 0 0 1px 0;
+}
+
+#answers .answer {
+    display: flex;
+}
+
+.answer .answer-left {
+    width: 30%;
+}
+
+.answer .answer-right {
+    width: 70%;
+}
+
+.answer .answer-right h2 {
+    border: solid #9199a1;
+    border-width: 0 0 1px 0;
+}
+
+.user-avatar {
+    max-width:100px;
+    margin: 0 auto;
+}
+
+.user-name {
+    text-align: center;
+    padding: .3rem 1rem;
+    font-size: 120%;
+    font-weight: 500;
+}
+
+.user-stats {
+    display: flex;
+}
+
+.user-stat {
+    text-align: center;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.user-stat span {
+    font-size: 150%;
+    font-weight: 400;
+    margin: 0;
+    color: #9199a1;
+}
+
+.user-stat label {
+    font-size: 75%;
+    color: #9199a1;
+    margin: 0;
+}
+
+footer{
+    margin-top: 2rem;
+    padding: 1rem .3rem;
+    background-color: #242729;
+    color: #6a737c;
+}

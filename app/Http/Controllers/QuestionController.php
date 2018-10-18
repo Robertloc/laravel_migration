@@ -1,30 +1,38 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
+use App\Question;
+use App\Answer;
 use Illuminate\Http\Request;
+
 
 class QuestionController extends Controller
 {
-     function index (){
+     public function index (){
 
-        $questions = \App\Question::orderBy('created_at', 'desc')
+        $questions = \App\Question::withCount('answers')
+        ->orderBy('created_at', 'desc')
             ->get();
 
-        dd($questions);
+      
 
-        echo 'This is the list of questions';
+      
+
+        $view = view('questions/index', ['questions'=>$questions]);
+
+        return $view;
      }
 
-     function show () {
+    public function show () {
+
 
         $question = Question::find(1);
 
         $answers = $question->answers()
             ->orderBy('created_at', 'asc')
             ->get();
-
-        dd($answers);
-       echo 'This is a detail of a question';
+       
+        return view('questions/show', compact('question', 'answers'));
      }
 }

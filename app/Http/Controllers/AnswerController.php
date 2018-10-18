@@ -11,7 +11,7 @@ class AnswerController extends Controller
     //
     public function show() {
         //In the show method of the AnswerController use Eloquent to find an Answer object with the primary key equal to 1
-        $answer = Answer::findOrFail(1);
+        $answer = Answer::findOrFail(2);
 
         //In the show method of the AnswerController load the view answers/show and pass the found Answer object into it. Then return the view from the method.
         return view('answers/show', compact('answer'));
@@ -20,7 +20,7 @@ class AnswerController extends Controller
     public function vote() {
         $request = request();
 
-        $answer = Answer::find(1);
+        $answer = Answer::find(2);
 
         $vote = new Vote;
         $vote->answer_id = $answer->id;
