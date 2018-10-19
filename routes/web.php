@@ -15,9 +15,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/questions/create', 'QuestionController@create')->name('question.detail');
+
+Route::post('/questions/create', 'QuestionController@store');
+
+
+
+
+Route::post('/categories/{id}/create', 'CategoryController@create');
+
+
 Route::get('/questions', 'QuestionController@index')->name('homepage');
 
 Route::get('/questions/{id}', 'QuestionController@show');
+
+
 
 Route::get('/categories', 'CategoryController@index');
 
