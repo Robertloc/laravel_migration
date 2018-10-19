@@ -9,18 +9,18 @@ use Illuminate\Http\Request;
 class AnswerController extends Controller
 {
     //
-    public function show() {
+    public function show($id) {
         //In the show method of the AnswerController use Eloquent to find an Answer object with the primary key equal to 1
-        $answer = Answer::findOrFail(2);
+        $answer = Answer::findOrFail($id);
 
         //In the show method of the AnswerController load the view answers/show and pass the found Answer object into it. Then return the view from the method.
         return view('answers/show', compact('answer'));
     }
 
-    public function vote() {
+    public function vote($id) {
         $request = request();
 
-        $answer = Answer::find(2);
+        $answer = Answer::find($id);
 
         $vote = new Vote;
         $vote->answer_id = $answer->id;

@@ -25,7 +25,7 @@
             </div>
             <div class="question-right">
                 <div class="question-name">
-                    <a href="#">{{ $question->title }}</a>
+                    <a href="{{ action('QuestionController@show', ['id' => $question->id]) }}">{{ $question->title }}</a>
                 </div>
                 <div class="question-info">
                     asked at {{ $question->created_at }} by <a href="">slavo</a>

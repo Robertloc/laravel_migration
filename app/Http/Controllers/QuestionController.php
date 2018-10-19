@@ -24,10 +24,10 @@ class QuestionController extends Controller
         return $view;
      }
 
-    public function show () {
+    public function show ($id) {
 
 
-        $question = Question::find(1);
+        $question = Question::findOrFail($id);
 
         $answers = $question->answers()
             ->orderBy('created_at', 'asc')

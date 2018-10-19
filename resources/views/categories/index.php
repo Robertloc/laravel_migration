@@ -9,7 +9,7 @@
         <ul class="list-group">
             <?php foreach($categories as $category) : ?>
                 <li class="list-group-item">
-                    <?= $category->name ?>Z
+                    <?= $category->name ?>
                 </li>
             <?php endforeach; ?>
         </ul>

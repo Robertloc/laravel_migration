@@ -15,12 +15,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/questions', 'QuestionController@index');
+Route::get('/questions', 'QuestionController@index')->name('homepage');
 
-Route::get('/questions/1', 'QuestionController@show');
+Route::get('/questions/{id}', 'QuestionController@show');
 
 Route::get('/categories', 'CategoryController@index');
 
-Route::get('/answers/1', 'AnswerController@show');
+Route::get('/answers/{id}', 'AnswerController@show');
 
-Route::post('/answers/1', 'AnswerController@vote');
+Route::post('/answers/{id}', 'AnswerController@vote');
+
+Route::get('/categories/create', 'CategoryController@create')->name('categories.create');
+// When the user comes to categories create with the get method, he will be taken to categorycontroller create method, and this route has been defined as categories create so that we can refer to it later by its name
+
+Route::get('/categories/{id}/edit', 'CategoryController@edit')->name('categories.edit');
+//anything with the ID categories in the database allows you to edit 
+
+Route::post('/categories/create', 'CategoryController@store');
+Route::post('/categories/{id}/edit', 'CategoryController@store');
+//these are for the post method, and the URLs are the same as the two methods above. Both going to the same method store. 
